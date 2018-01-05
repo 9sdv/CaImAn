@@ -331,7 +331,7 @@ def main(argv):
         crd = plot_contours(A.tocsc(), Cn, thr=0.9)
         print 'finished plotting'
 
-        rois = exportRois(fname, crd)
+        rois = exportRois(fname, crd, z_plane=args.z_plane)
         print 'roi sima export complete'
 
         ph = PlotHelper(fname, 'cnmf.pdf')

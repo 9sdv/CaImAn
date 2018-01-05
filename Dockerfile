@@ -37,6 +37,11 @@ RUN pip install git+git://github.com/9sdv/sima.git@wrapper_sequences
 WORKDIR /CaImAn
 
 ENV OMP_NUM_THREADS 1
-CMD ipcontroller --ip="*"
+CMD ipcontroller --ip="*" &
+
+RUN apt-get install -y ipython-notebook
+RUN apt-get install -y ffmpeg
+RUN pip install jupyter
+CMD jupyter notebook --ip 0.0.0.0 --allow-root --port=8080
 
 EXPOSE 8080
