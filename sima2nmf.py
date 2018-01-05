@@ -28,7 +28,6 @@ from caiman.components_evaluation import evaluate_components
 from caiman.utils.visualization import plot_contours,view_patches_bar
 from caiman.base.rois import extract_binary_masks_blob
 
-from roi_plotter import PlotHelper
 from plot_results import signals_plotter
 
 
