@@ -42,6 +42,6 @@ CMD ipcontroller --ip="*" &
 RUN apt-get install -y ipython-notebook
 RUN apt-get install -y ffmpeg
 RUN pip install jupyter
+RUN pip intall jupyter_core --upgrade
 CMD jupyter notebook --ip 0.0.0.0 --allow-root --port=8080
-
 EXPOSE 8080
